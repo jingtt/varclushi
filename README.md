@@ -51,7 +51,9 @@ demo1_vc.rsqure
 
 # Installation
 
-Requirements: Python 3.4+
+- Requirements: Python 3.4+
+
+- Install:
 
 ```
 pip3 install varclushi
