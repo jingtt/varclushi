@@ -11,7 +11,7 @@ This is a Python module to perform variable clustering with a hierarchical struc
 - Those who are familar with the usage of varclus algorithm in other analytical software like SAS, but always feel distressed when trying to find a RIGHT python module.
 - Pythoners who are new to varclus algorithm. The source code will help you gain a deeper understanding of the math behind this algorithm.
 
-## INSIGHTS and HIGHLIGHTS:
+## INSIGHTS & HIGHLIGHTS:
 - Existing literatures always mention we should use principal components (refer step 2-3 above). Actually, implementing this algorithm DOES NOT require principle components to be calulated, correlation matrix and its eigenvectors are enough to get the squared correlation between component and variable (this can be proved by math). If our dataset has millions of observations and hundreds of variables, not using principal components will save time and memory.
 - Always correct, with professional SAS results as benchmark.
 
@@ -19,7 +19,7 @@ This is a Python module to perform variable clustering with a hierarchical struc
 
 # Example
 
-See [demo.ipynb](https://github.com/jingtt/varclushi/blob/master/demo.ipynb) for more details.
+## See [demo.ipynb](https://github.com/jingtt/varclushi/blob/master/demo.ipynb) for more details.
 
 ```python
 import pandas as pd
