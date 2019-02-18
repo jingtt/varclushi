@@ -57,12 +57,14 @@ Requirements: Python 3.4+
 pip3 install varclushi
 ```
 
+# Comments:
+- There are not many parameters controlling this algorithm, only second eigenvalues (maxeigval2, default 1) and max number of clusters (maxclus, default None). I do not develop other functions because it is enough for my use. If you have a need for more flexibility, you can reach out to me via xuanjing@hotmail.com.
+
+- Comments for source code will be added once I have time.
+
 # Thanks
 
 Thank my former manager, I first heard of this method from him. Thank my current manager, who gave me enough encouragement and support to complete this project.
 
-Shortcomings:
-- There are not many parameters controlling this algorithm, only second eigenvalues (maxeigval2, default 1) and max number of clusters (maxclus, default None). I do not develop other functions because it is enough for my use. If you have a need for more flexibility, you can reach out to me via xuanjing@hotmail.com.
 
-- Comments will be added to the source code when I have time.
  
