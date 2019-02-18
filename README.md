@@ -36,6 +36,7 @@ Create a VarClusHi object by passing the dataframe (df) to be analyzed, you can 
 - a feature list (feat_list, default all columns of df)
 - max second eigenvalue (maxeigval2, default 1)
 - max clusters (maxclus, default None)
+
 Then call method varclus(), which performs hierachical variable clustering algorithm
 
 ```python
