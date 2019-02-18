@@ -15,9 +15,6 @@ This is a Python module to perform variable clustering with a hierarchical struc
 - Existing literatures always mention we should use principal components (refer step 2-3 above). Actually, implementing this algorithm DOES NOT require principle components to be calulated, correlation matrix and its eigenvectors are enough to get the squared correlation between component and variable (this can be proved by math). If our dataset has millions of observations and hundreds of variables, not using principal components will save time and memory.
 - Always correct, with professional SAS results as benchmark.
 
-## Shortcomings:
-There are not many parameters controlling this algorithm, only second eigenvalues (maxeigval2, default 1) and max number of clusters (maxclus, default None). I do not develop other functions because it is enough for my use. If you have a need for more flexibility, you can reach out to me via xuanjing@hotmail.com.
-
 
 
 # Example
@@ -59,4 +56,13 @@ Requirements: Python 3.4+
 ```
 pip3 install varclushi
 ```
+
+# Thanks
+
+Thank my former manager, I first heard of this method from him. Thank my current manager, who gave me enough encouragement and support to complete this project.
+
+Shortcomings:
+- There are not many parameters controlling this algorithm, only second eigenvalues (maxeigval2, default 1) and max number of clusters (maxclus, default None). I do not develop other functions because it is enough for my use. If you have a need for more flexibility, you can reach out to me via xuanjing@hotmail.com.
+
+- Comments will be added to the source code when I have time.
  
