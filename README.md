@@ -18,14 +18,11 @@ This is a Python module to perform variable clustering with a hierarchical struc
 
 # Example
 
-Create a VarClusHi object by passing the dataframe (df) to be analyzed, you can specify 
--- a feature list (feat_list, default all columns of df)
--- max second eigenvalue (maxeigval2, default 1)
--- max clusters (maxclus, default None)
+
  
-- then call method varclus(), which performs hierachical variable clustering algorithm
-- call info, get number of clusters, number of variables in each cluster (N_vars), variance explained by each cluster (Eigval1), etc.
-- call rsquare, get the (1 - rsquare) ratio of each variable
+
+
+
 
 
 ## See [demo.ipynb](https://github.com/jingtt/varclushi/blob/master/demo.ipynb) for more details.
@@ -35,6 +32,11 @@ import pandas as pd
 from varclushi import VarClusHi
 ```
 
+Create a VarClusHi object by passing the dataframe (df) to be analyzed, you can specify 
+- a feature list (feat_list, default all columns of df)
+- max second eigenvalue (maxeigval2, default 1)
+- max clusters (maxclus, default None)
+Then call method varclus(), which performs hierachical variable clustering algorithm
 
 ```python
 demo1_df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv', sep=';')
@@ -45,7 +47,7 @@ demo1_vc.varclus()
 ```
 <varclushi.varclushi.VarClusHi at 0x15f96e35e10>
 ```
-
+Call info, get number of clusters, number of variables in each cluster (N_vars), variance explained by each cluster (Eigval1), etc.
 
 ```python
 demo1_vc.info
@@ -58,6 +60,8 @@ demo1_vc.info
 3       3      2  1.552496  0.447504  0.776248
 4       4      1  1.000000  0.000000  1.000000
 ```
+
+Call rsquare, get the (1 - rsquare) ratio of each variable
 
 ```python
 demo1_vc.rsquare
@@ -91,7 +95,7 @@ pip3 install varclushi
 ```
 
 # Comments:
-- There are not many parameters controlling this algorithm, only second eigenvalues (maxeigval2, default 1) and max number of clusters (maxclus, default None). I do not develop other functions because it is enough for my use. If you have a need for more flexibility, you can reach out to me via xuanjing@hotmail.com.
+- There are not many parameters controlling this algorithm, only second eigenvalues and max number of clusters. I do not develop other functions because it is enough for my use. If you have a need for more flexibility, you can reach out to me via xuanjing@hotmail.com.
 
 - Comments for source code will be added once I have time.
 
