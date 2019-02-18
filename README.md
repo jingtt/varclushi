@@ -8,7 +8,7 @@ This is a Python module to perform variable clustering with a hierarchical struc
 
 
 ## Indented Audience:
-- Those who are familar with the usage of varclus algorithm in other analytical software like SAS, but always feel distressed when trying to find a RIGHT python version.
+- Those who are familar with the usage of varclus algorithm in other analytical software like SAS, but always feel distressed when trying to find a RIGHT python module.
 - Pythoners who are new to varclus algorithm. The source code will help you gain a deeper understanding of the math behind this algorithm.
 
 ## INSIGHTS and HIGHLIGHTS:
