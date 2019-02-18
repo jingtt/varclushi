@@ -8,15 +8,15 @@ This is a Python module to perform variable clustering with a hierarchical struc
 3. Variables are iteratively reassigned to clusters to maximize the variance accounted for by the cluster components.
 ```
 
-The audience of this project might be:
+## The audience of this project might be:
 - Those who are familar with the usage of varclus algorithm in other analytical software like SAS, but always feel distressed when trying to find a RIGHT python version.
 - Pythoners who are new to varclus algorithm. The source code will help you gain a deeper understanding of the math behind this algorithm.
 
-The HIGHLIGHTS of this project are:
+## The HIGHLIGHTS of this project are:
 - Current literature , actually, we DO NOT need to compute priciple components, we only need eigenvectors and correlation matrix! 
 - Always correct, with professional SAS results as benchmark.
 
-The shortcomings of this project are:
+## The shortcomings of this project are:
 - 
 
 
