@@ -362,6 +362,7 @@ class VarClusHi(object):
         return rs_table
 		
 
+	
 if __name__ == '__main__':
 	demo_df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv', sep=';')
 	demo_df.drop('quality', axis=1,inplace=True)
