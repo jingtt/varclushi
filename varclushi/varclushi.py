@@ -318,7 +318,7 @@ class VarClusHi(object):
 
                     rs_others.append(rs)
 
-                rs_nc = max(rs_others)
+                rs_nc = max(rs_others) if len(rs_others) > 0 else 0
                 row += [rs_own, rs_nc, (1 - rs_own) / (1 - rs_nc)]
                 rs_table.loc[n_row] = row
                 n_row += 1
@@ -353,7 +353,7 @@ class VarClusHi(object):
 
                     rs_others.append(rs)
 
-                rs_nc = max(rs_others)
+                rs_nc = max(rs_others) if len(rs_others) > 0 else 0
                 row += [rs_own, rs_nc, (1 - rs_own) / (1 - rs_nc)]
                 rs_table.loc[n_row] = row
                 n_row += 1
