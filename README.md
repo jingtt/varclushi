@@ -16,8 +16,17 @@ This is a Python module to perform variable clustering with a hierarchical struc
 - Always correct, with professional SAS results as benchmark.
 
 
-
 # Example
+
+Create a VarClusHi object by passing the dataframe (df) to be analyzed, you can specify 
+-- a feature list (feat_list, default all columns of df)
+-- max second eigenvalue (maxeigval2, default 1)
+-- max clusters (maxclus, default None)
+ 
+- then call method varclus(), which performs hierachical variable clustering algorithm
+- call info, get number of clusters, number of variables in each cluster (N_vars), variance explained by each cluster (Eigval1), etc.
+- call rsquare, get the (1 - rsquare) ratio of each variable
+
 
 ## See [demo.ipynb](https://github.com/jingtt/varclushi/blob/master/demo.ipynb) for more details.
 
@@ -33,8 +42,9 @@ demo1_df.drop('quality',axis=1,inplace=True)
 demo1_vc = VarClusHi(demo1_df,maxeigval2=1,maxclus=None)
 demo1_vc.varclus()
 ```
-
+```
 <varclushi.varclushi.VarClusHi at 0x15f96e35e10>
+```
 
 
 ```python
