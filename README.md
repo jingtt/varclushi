@@ -19,8 +19,6 @@ This is a Python module to perform variable clustering with a hierarchical struc
 # Example
 
 
- 
-
 
 
 
