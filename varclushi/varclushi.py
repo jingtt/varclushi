@@ -7,6 +7,7 @@ import math
 from factor_analyzer import Rotator
 
 
+
 class VarClusHi(object):
 
     def __init__(self,df,feat_list=None,maxeigval2=1,maxclus=None,n_rs=0):
