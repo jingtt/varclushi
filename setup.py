@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="varclushi",
-    version="0.0.7",
+    version="0.1.0",
     author="Xuan Jing",
     author_email="xuanjing@hotmail.com",
     description="A package for variable clustering",
@@ -16,7 +16,7 @@ setuptools.setup(
 	install_requires=[
 		"pandas",
 		"numpy",
-		"factor-analyzer",
+		"factor-analyzer==0.3.1",
 	],
     classifiers=[
 		"Intended Audience :: Science/Research",
