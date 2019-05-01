@@ -1,11 +1,11 @@
 
+
 import pandas as pd
 import numpy as np
 import random
 import collections
 import math
 from factor_analyzer import Rotator
-
 
 
 class VarClusHi(object):
@@ -37,7 +37,7 @@ class VarClusHi(object):
             varprops = [sum(eigvals)]
         else:
             corr = np.corrcoef(df.values.T)
-            raw_eigvals, raw_eigvecs = np.linalg.eig(corr)
+            raw_eigvals, raw_eigvecs = np.linalg.eigh(corr)
             idx = np.argsort(raw_eigvals)[::-1]
             eigvals, eigvecs = raw_eigvals[idx], raw_eigvecs[:, idx]
             eigvals, eigvecs = eigvals[:n_pcs], eigvecs[:, :n_pcs]
@@ -167,8 +167,8 @@ class VarClusHi(object):
 
             if c_eigvals[1] > self.maxeigval2:
                 clus1, clus2 = [], []
-                rotator = Rotator()
-                r_eigvecs = rotator.rotate(pd.DataFrame(c_eigvecs), 'quartimax')[0].values
+                rotator = Rotator(method='quartimax')
+                r_eigvecs = rotator.fit_transform(pd.DataFrame(c_eigvecs))
 
                 comb_sigma1 = math.sqrt(np.dot(np.dot(r_eigvecs[:, 0], split_corrs.values), r_eigvecs[:, 0].T))
                 comb_sigma2 = math.sqrt(np.dot(np.dot(r_eigvecs[:, 1], split_corrs.values), r_eigvecs[:, 1].T))
@@ -239,8 +239,8 @@ class VarClusHi(object):
 
             if c_eigvals[1] > self.maxeigval2:
                 clus1, clus2 = [], []
-                rotator = Rotator()
-                r_eigvecs = rotator.rotate(pd.DataFrame(c_eigvecs), 'quartimax')[0]
+                rotator = Rotator(method='quartimax')
+                r_eigvecs = rotator.fit_transform(pd.DataFrame(c_eigvecs))
                 stand_df = (self.df - self.df.mean()) / self.df.std()
                 r_pcs = np.dot(stand_df[split_clus].values, r_eigvecs)
 
@@ -370,4 +370,3 @@ if __name__ == '__main__':
 	demo_vc.varclus()
 	print(demo_vc.info)
 	print(demo_vc.rsquare)
-
