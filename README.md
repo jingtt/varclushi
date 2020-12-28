@@ -102,6 +102,4 @@ pip install varclushi
 
 - Comments for source code will be added once I have time.
 
-# Thanks
 
-Thank my former manager ***, I first heard of this method from him. Thank my current manager Mr. Mingsong Li, who gave me enough encouragement and support to complete this project.
